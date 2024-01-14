@@ -1,0 +1,2811 @@
+TITLE
+ PICOCO2700
+
+VERSION
+  6.0  FDS 6, Release Candidate 3
+
+ENDF
+ PICOCO2700.end
+
+INPF
+ F:\sean\Production4_Jan2018\2700_2\PICOCO\input_PICOCO.fds
+
+REVISION
+ 14299
+
+CHID
+ PICOCO2700
+
+CSVF
+ hrr
+ PICOCO2700_hrr.csv
+
+CSVF
+ devc
+ PICOCO2700_devc.csv
+
+NMESHES
+  1
+
+VIEWTIMES
+      0.00    600.00  1000
+
+ALBEDO
+      0.30000
+
+SURFDEF
+ HOT                                                         
+
+SURFACE
+ INERT                                                       
+ 5000.00    1.00
+ 0      1.00000      1.00000      1.00000      0.80000      0.40000      1.00000
+ null                                                        
+
+SURFACE
+ CONE                                                        
+  273.15    0.94
+ 0      1.00000      1.00000      1.00000      0.80000      0.40000      1.00000
+ null                                                        
+
+SURFACE
+ HOT                                                         
+ 5000.00    1.00
+ 0      1.00000      1.00000      1.00000      0.80000      0.40000      1.00000
+ null                                                        
+
+SURFACE
+ OPEN                                                        
+ 5000.00    1.00
+ 2      1.00000      1.00000      1.00000      0.80000      0.40000      1.00000
+ null                                                        
+
+SURFACE
+ MIRROR                                                      
+ 5000.00    1.00
+-2      1.00000      1.00000      1.00000      0.80000      0.40000      1.00000
+ null                                                        
+
+SURFACE
+ INTERPOLATED                                                
+ 5000.00    1.00
+ 0      1.00000      1.00000      1.00000      0.80000      0.40000      1.00000
+ null                                                        
+
+SURFACE
+ PERIODIC                                                    
+ 5000.00    1.00
+ 0      1.00000      1.00000      1.00000      0.80000      0.40000      1.00000
+ null                                                        
+
+SURFACE
+ HVAC                                                        
+ 5000.00    1.00
+ 0      1.00000      1.00000      1.00000      0.80000      0.40000      1.00000
+ null                                                        
+
+SURFACE
+ MASSLESS PARTICLE                                           
+ 5000.00    1.00
+ 0      1.00000      1.00000      1.00000      0.80000      0.40000      1.00000
+ null                                                        
+
+SURFACE
+ DROPLET                                                     
+ 5000.00    1.00
+ 0      1.00000      1.00000      1.00000      0.80000      0.40000      1.00000
+ null                                                        
+
+SURFACE
+ VEGETATION                                                  
+ 5000.00    1.00
+ 0      1.00000      1.00000      1.00000      0.80000      0.40000      1.00000
+ null                                                        
+
+SURFACE
+ EVACUATION_OUTFLOW                                          
+ 5000.00    1.00
+ 0      1.00000      1.00000      1.00000      0.80000      0.40000      1.00000
+ null                                                        
+
+CLASS_OF_PARTICLES
+ cone particle                  % % rod shape
+      0.00000      0.00000      0.00000
+  1
+ PARTICLE TEMPERATURE                                        
+ temp                          
+ C                             
+
+OUTLINE
+  12
+      0.0000      0.0000      0.0000      0.0000      0.0000      5.1000
+      0.0000      1.0000      0.0000      0.0000      1.0000      5.1000
+      1.0000      0.0000      0.0000      1.0000      0.0000      5.1000
+      1.0000      1.0000      0.0000      1.0000      1.0000      5.1000
+      0.0000      0.0000      0.0000      0.0000      1.0000      0.0000
+      0.0000      0.0000      5.1000      0.0000      1.0000      5.1000
+      1.0000      0.0000      0.0000      1.0000      1.0000      0.0000
+      1.0000      0.0000      5.1000      1.0000      1.0000      5.1000
+      0.0000      0.0000      0.0000      1.0000      0.0000      0.0000
+      0.0000      1.0000      0.0000      1.0000      1.0000      0.0000
+      0.0000      0.0000      5.1000      1.0000      0.0000      5.1000
+      0.0000      1.0000      5.1000      1.0000      1.0000      5.1000
+
+TOFFSET
+      0.00000      0.00000      0.00000
+
+HRRPUVCUT
+     1
+    200.00000
+
+RAMP
+    6
+ RAMP: k_cone                        
+    2
+  273.15     0.84600E-01
+  1273.2     0.30960    
+ RAMP: c_cone                        
+    2
+  273.15      1.1600    
+  1273.2      5.0270    
+ RAMP: k_water                       
+    5
+  273.15     0.56900    
+  300.00     0.61300    
+  325.00     0.64500    
+  350.00     0.66800    
+  373.15     0.68000    
+ RAMP: c_water                       
+   11
+  273.15      4.2170    
+  280.00      4.1980    
+  290.00      4.1840    
+  300.00      4.1790    
+  310.00      4.1780    
+  320.00      4.1800    
+  330.00      4.1840    
+  340.00      4.1880    
+  350.00      4.1950    
+  360.00      4.2030    
+  373.15      4.2170    
+ RAMP: c_char                        
+    5
+  313.00     0.70400    
+  400.00     0.98900    
+  500.00      1.2440    
+  600.00      1.4240    
+  686.00      1.5170    
+ RAMP: HOTRAMP                       
+    5
+  0.0000      0.0000    
+  10.000      0.0000    
+  50.000      1.0000    
+  70.000      1.0000    
+  240.00      0.0000    
+
+PROP
+ null
+  1
+ sensor
+  0
+
+PROP
+ rod shape
+  1
+ TUBE
+  2
+ D=0.012                       
+ L=0.03                        
+
+DEVICE
+ Qr0.05 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     0.05000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc0.05 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     0.05000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf0.05 % WALL TEMPERATURE
+     0.50000     0.50000     0.05000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed0.05 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     0.05000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr0.1 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     0.10000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc0.1 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     0.10000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf0.1 % WALL TEMPERATURE
+     0.50000     0.50000     0.10000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed0.1 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     0.10000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr0.15 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     0.15000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc0.15 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     0.15000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf0.15 % WALL TEMPERATURE
+     0.50000     0.50000     0.15000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed0.15 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     0.15000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr0.2 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     0.20000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc0.2 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     0.20000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf0.2 % WALL TEMPERATURE
+     0.50000     0.50000     0.20000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed0.2 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     0.20000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr0.25 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     0.25000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc0.25 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     0.25000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf0.25 % WALL TEMPERATURE
+     0.50000     0.50000     0.25000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed0.25 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     0.25000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr0.3 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     0.30000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc0.3 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     0.30000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf0.3 % WALL TEMPERATURE
+     0.50000     0.50000     0.30000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed0.3 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     0.30000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr0.35 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     0.35000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc0.35 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     0.35000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf0.35 % WALL TEMPERATURE
+     0.50000     0.50000     0.35000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed0.35 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     0.35000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr0.4 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     0.40000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc0.4 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     0.40000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf0.4 % WALL TEMPERATURE
+     0.50000     0.50000     0.40000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed0.4 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     0.40000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr0.45 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     0.45000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc0.45 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     0.45000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf0.45 % WALL TEMPERATURE
+     0.50000     0.50000     0.45000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed0.45 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     0.45000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr0.5 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     0.50000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc0.5 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     0.50000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf0.5 % WALL TEMPERATURE
+     0.50000     0.50000     0.50000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed0.5 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     0.50000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr0.55 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     0.55000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc0.55 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     0.55000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf0.55 % WALL TEMPERATURE
+     0.50000     0.50000     0.55000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed0.55 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     0.55000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr0.6 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     0.60000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc0.6 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     0.60000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf0.6 % WALL TEMPERATURE
+     0.50000     0.50000     0.60000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed0.6 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     0.60000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr0.65 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     0.65000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc0.65 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     0.65000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf0.65 % WALL TEMPERATURE
+     0.50000     0.50000     0.65000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed0.65 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     0.65000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr0.7 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     0.70000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc0.7 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     0.70000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf0.7 % WALL TEMPERATURE
+     0.50000     0.50000     0.70000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed0.7 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     0.70000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr0.75 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     0.75000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc0.75 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     0.75000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf0.75 % WALL TEMPERATURE
+     0.50000     0.50000     0.75000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed0.75 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     0.75000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr0.8 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     0.80000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc0.8 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     0.80000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf0.8 % WALL TEMPERATURE
+     0.50000     0.50000     0.80000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed0.8 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     0.80000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr0.85 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     0.85000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc0.85 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     0.85000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf0.85 % WALL TEMPERATURE
+     0.50000     0.50000     0.85000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed0.85 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     0.85000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr0.9 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     0.90000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc0.9 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     0.90000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf0.9 % WALL TEMPERATURE
+     0.50000     0.50000     0.90000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed0.9 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     0.90000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr0.95 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     0.95000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc0.95 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     0.95000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf0.95 % WALL TEMPERATURE
+     0.50000     0.50000     0.95000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed0.95 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     0.95000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr1 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     1.00000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc1 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     1.00000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf1 % WALL TEMPERATURE
+     0.50000     0.50000     1.00000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed1 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     1.00000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr1.05 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     1.05000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc1.05 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     1.05000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf1.05 % WALL TEMPERATURE
+     0.50000     0.50000     1.05000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed1.05 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     1.05000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr1.1 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     1.10000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc1.1 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     1.10000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf1.1 % WALL TEMPERATURE
+     0.50000     0.50000     1.10000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed1.1 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     1.10000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr1.15 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     1.15000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc1.15 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     1.15000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf1.15 % WALL TEMPERATURE
+     0.50000     0.50000     1.15000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed1.15 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     1.15000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr1.2 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     1.20000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc1.2 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     1.20000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf1.2 % WALL TEMPERATURE
+     0.50000     0.50000     1.20000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed1.2 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     1.20000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr1.25 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     1.25000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc1.25 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     1.25000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf1.25 % WALL TEMPERATURE
+     0.50000     0.50000     1.25000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed1.25 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     1.25000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr1.3 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     1.30000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc1.3 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     1.30000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf1.3 % WALL TEMPERATURE
+     0.50000     0.50000     1.30000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed1.3 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     1.30000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr1.35 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     1.35000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc1.35 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     1.35000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf1.35 % WALL TEMPERATURE
+     0.50000     0.50000     1.35000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed1.35 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     1.35000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr1.4 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     1.40000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc1.4 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     1.40000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf1.4 % WALL TEMPERATURE
+     0.50000     0.50000     1.40000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed1.4 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     1.40000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr1.45 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     1.45000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc1.45 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     1.45000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf1.45 % WALL TEMPERATURE
+     0.50000     0.50000     1.45000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed1.45 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     1.45000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr1.5 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     1.50000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc1.5 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     1.50000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf1.5 % WALL TEMPERATURE
+     0.50000     0.50000     1.50000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed1.5 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     1.50000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr1.55 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     1.55000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc1.55 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     1.55000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf1.55 % WALL TEMPERATURE
+     0.50000     0.50000     1.55000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed1.55 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     1.55000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr1.6 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     1.60000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc1.6 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     1.60000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf1.6 % WALL TEMPERATURE
+     0.50000     0.50000     1.60000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed1.6 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     1.60000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr1.65 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     1.65000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc1.65 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     1.65000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf1.65 % WALL TEMPERATURE
+     0.50000     0.50000     1.65000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed1.65 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     1.65000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr1.7 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     1.70000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc1.7 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     1.70000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf1.7 % WALL TEMPERATURE
+     0.50000     0.50000     1.70000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed1.7 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     1.70000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr1.75 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     1.75000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc1.75 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     1.75000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf1.75 % WALL TEMPERATURE
+     0.50000     0.50000     1.75000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed1.75 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     1.75000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr1.8 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     1.80000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc1.8 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     1.80000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf1.8 % WALL TEMPERATURE
+     0.50000     0.50000     1.80000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed1.8 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     1.80000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr1.85 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     1.85000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc1.85 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     1.85000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf1.85 % WALL TEMPERATURE
+     0.50000     0.50000     1.85000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed1.85 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     1.85000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr1.9 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     1.90000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc1.9 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     1.90000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf1.9 % WALL TEMPERATURE
+     0.50000     0.50000     1.90000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed1.9 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     1.90000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr1.95 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     1.95000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc1.95 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     1.95000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf1.95 % WALL TEMPERATURE
+     0.50000     0.50000     1.95000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed1.95 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     1.95000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr2 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     2.00000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc2 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     2.00000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf2 % WALL TEMPERATURE
+     0.50000     0.50000     2.00000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed2 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     2.00000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr2.05 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     2.05000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc2.05 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     2.05000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf2.05 % WALL TEMPERATURE
+     0.50000     0.50000     2.05000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed2.05 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     2.05000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr2.1 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     2.10000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc2.1 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     2.10000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf2.1 % WALL TEMPERATURE
+     0.50000     0.50000     2.10000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed2.1 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     2.10000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr2.15 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     2.15000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc2.15 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     2.15000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf2.15 % WALL TEMPERATURE
+     0.50000     0.50000     2.15000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed2.15 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     2.15000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr2.2 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     2.20000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc2.2 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     2.20000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf2.2 % WALL TEMPERATURE
+     0.50000     0.50000     2.20000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed2.2 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     2.20000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr2.25 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     2.25000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc2.25 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     2.25000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf2.25 % WALL TEMPERATURE
+     0.50000     0.50000     2.25000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed2.25 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     2.25000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr2.3 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     2.30000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc2.3 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     2.30000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf2.3 % WALL TEMPERATURE
+     0.50000     0.50000     2.30000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed2.3 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     2.30000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr2.35 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     2.35000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc2.35 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     2.35000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf2.35 % WALL TEMPERATURE
+     0.50000     0.50000     2.35000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed2.35 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     2.35000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr2.4 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     2.40000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc2.4 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     2.40000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf2.4 % WALL TEMPERATURE
+     0.50000     0.50000     2.40000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed2.4 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     2.40000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr2.45 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     2.45000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc2.45 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     2.45000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf2.45 % WALL TEMPERATURE
+     0.50000     0.50000     2.45000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed2.45 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     2.45000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr2.5 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     2.50000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc2.5 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     2.50000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf2.5 % WALL TEMPERATURE
+     0.50000     0.50000     2.50000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed2.5 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     2.50000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr2.55 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     2.55000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc2.55 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     2.55000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf2.55 % WALL TEMPERATURE
+     0.50000     0.50000     2.55000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed2.55 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     2.55000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr2.6 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     2.60000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc2.6 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     2.60000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf2.6 % WALL TEMPERATURE
+     0.50000     0.50000     2.60000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed2.6 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     2.60000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr2.65 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     2.65000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc2.65 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     2.65000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf2.65 % WALL TEMPERATURE
+     0.50000     0.50000     2.65000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed2.65 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     2.65000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr2.7 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     2.70000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc2.7 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     2.70000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf2.7 % WALL TEMPERATURE
+     0.50000     0.50000     2.70000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed2.7 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     2.70000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr2.75 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     2.75000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc2.75 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     2.75000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf2.75 % WALL TEMPERATURE
+     0.50000     0.50000     2.75000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed2.75 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     2.75000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr2.8 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     2.80000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc2.8 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     2.80000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf2.8 % WALL TEMPERATURE
+     0.50000     0.50000     2.80000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed2.8 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     2.80000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr2.85 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     2.85000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc2.85 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     2.85000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf2.85 % WALL TEMPERATURE
+     0.50000     0.50000     2.85000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed2.85 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     2.85000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr2.9 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     2.90000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc2.9 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     2.90000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf2.9 % WALL TEMPERATURE
+     0.50000     0.50000     2.90000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed2.9 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     2.90000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr2.95 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     2.95000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc2.95 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     2.95000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf2.95 % WALL TEMPERATURE
+     0.50000     0.50000     2.95000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed2.95 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     2.95000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr3 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     3.00000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc3 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     3.00000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf3 % WALL TEMPERATURE
+     0.50000     0.50000     3.00000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed3 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     3.00000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr3.05 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     3.05000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc3.05 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     3.05000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf3.05 % WALL TEMPERATURE
+     0.50000     0.50000     3.05000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed3.05 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     3.05000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr3.1 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     3.10000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc3.1 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     3.10000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf3.1 % WALL TEMPERATURE
+     0.50000     0.50000     3.10000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed3.1 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     3.10000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr3.15 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     3.15000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc3.15 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     3.15000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf3.15 % WALL TEMPERATURE
+     0.50000     0.50000     3.15000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed3.15 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     3.15000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr3.2 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     3.20000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc3.2 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     3.20000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf3.2 % WALL TEMPERATURE
+     0.50000     0.50000     3.20000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed3.2 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     3.20000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr3.25 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     3.25000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc3.25 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     3.25000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf3.25 % WALL TEMPERATURE
+     0.50000     0.50000     3.25000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed3.25 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     3.25000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr3.3 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     3.30000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc3.3 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     3.30000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf3.3 % WALL TEMPERATURE
+     0.50000     0.50000     3.30000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed3.3 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     3.30000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr3.35 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     3.35000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc3.35 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     3.35000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf3.35 % WALL TEMPERATURE
+     0.50000     0.50000     3.35000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed3.35 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     3.35000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr3.4 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     3.40000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc3.4 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     3.40000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf3.4 % WALL TEMPERATURE
+     0.50000     0.50000     3.40000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed3.4 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     3.40000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr3.45 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     3.45000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc3.45 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     3.45000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf3.45 % WALL TEMPERATURE
+     0.50000     0.50000     3.45000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed3.45 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     3.45000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr3.5 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     3.50000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc3.5 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     3.50000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf3.5 % WALL TEMPERATURE
+     0.50000     0.50000     3.50000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed3.5 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     3.50000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr3.55 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     3.55000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc3.55 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     3.55000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf3.55 % WALL TEMPERATURE
+     0.50000     0.50000     3.55000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed3.55 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     3.55000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr3.6 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     3.60000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc3.6 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     3.60000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf3.6 % WALL TEMPERATURE
+     0.50000     0.50000     3.60000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed3.6 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     3.60000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr3.65 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     3.65000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc3.65 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     3.65000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf3.65 % WALL TEMPERATURE
+     0.50000     0.50000     3.65000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed3.65 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     3.65000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr3.7 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     3.70000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc3.7 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     3.70000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf3.7 % WALL TEMPERATURE
+     0.50000     0.50000     3.70000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed3.7 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     3.70000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr3.75 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     3.75000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc3.75 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     3.75000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf3.75 % WALL TEMPERATURE
+     0.50000     0.50000     3.75000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed3.75 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     3.75000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr3.8 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     3.80000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc3.8 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     3.80000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf3.8 % WALL TEMPERATURE
+     0.50000     0.50000     3.80000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed3.8 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     3.80000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr3.85 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     3.85000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc3.85 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     3.85000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf3.85 % WALL TEMPERATURE
+     0.50000     0.50000     3.85000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed3.85 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     3.85000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr3.9 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     3.90000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc3.9 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     3.90000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf3.9 % WALL TEMPERATURE
+     0.50000     0.50000     3.90000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed3.9 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     3.90000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr3.95 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     3.95000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc3.95 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     3.95000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf3.95 % WALL TEMPERATURE
+     0.50000     0.50000     3.95000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed3.95 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     3.95000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr4 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     4.00000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc4 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     4.00000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf4 % WALL TEMPERATURE
+     0.50000     0.50000     4.00000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed4 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     4.00000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr4.05 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     4.05000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc4.05 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     4.05000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf4.05 % WALL TEMPERATURE
+     0.50000     0.50000     4.05000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed4.05 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     4.05000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr4.1 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     4.10000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc4.1 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     4.10000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf4.1 % WALL TEMPERATURE
+     0.50000     0.50000     4.10000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed4.1 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     4.10000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr4.15 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     4.15000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc4.15 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     4.15000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf4.15 % WALL TEMPERATURE
+     0.50000     0.50000     4.15000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed4.15 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     4.15000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr4.2 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     4.20000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc4.2 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     4.20000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf4.2 % WALL TEMPERATURE
+     0.50000     0.50000     4.20000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed4.2 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     4.20000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr4.25 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     4.25000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc4.25 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     4.25000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf4.25 % WALL TEMPERATURE
+     0.50000     0.50000     4.25000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed4.25 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     4.25000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr4.3 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     4.30000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc4.3 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     4.30000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf4.3 % WALL TEMPERATURE
+     0.50000     0.50000     4.30000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed4.3 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     4.30000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr4.35 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     4.35000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc4.35 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     4.35000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf4.35 % WALL TEMPERATURE
+     0.50000     0.50000     4.35000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed4.35 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     4.35000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr4.4 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     4.40000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc4.4 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     4.40000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf4.4 % WALL TEMPERATURE
+     0.50000     0.50000     4.40000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed4.4 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     4.40000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr4.45 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     4.45000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc4.45 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     4.45000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf4.45 % WALL TEMPERATURE
+     0.50000     0.50000     4.45000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed4.45 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     4.45000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr4.5 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     4.50000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc4.5 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     4.50000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf4.5 % WALL TEMPERATURE
+     0.50000     0.50000     4.50000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed4.5 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     4.50000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr4.55 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     4.55000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc4.55 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     4.55000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf4.55 % WALL TEMPERATURE
+     0.50000     0.50000     4.55000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed4.55 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     4.55000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr4.6 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     4.60000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc4.6 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     4.60000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf4.6 % WALL TEMPERATURE
+     0.50000     0.50000     4.60000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed4.6 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     4.60000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr4.65 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     4.65000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc4.65 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     4.65000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf4.65 % WALL TEMPERATURE
+     0.50000     0.50000     4.65000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed4.65 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     4.65000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr4.7 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     4.70000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc4.7 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     4.70000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf4.7 % WALL TEMPERATURE
+     0.50000     0.50000     4.70000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed4.7 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     4.70000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr4.75 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     4.75000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc4.75 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     4.75000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf4.75 % WALL TEMPERATURE
+     0.50000     0.50000     4.75000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed4.75 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     4.75000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr4.8 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     4.80000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc4.8 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     4.80000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf4.8 % WALL TEMPERATURE
+     0.50000     0.50000     4.80000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed4.8 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     4.80000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr4.85 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     4.85000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc4.85 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     4.85000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf4.85 % WALL TEMPERATURE
+     0.50000     0.50000     4.85000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed4.85 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     4.85000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr4.9 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     4.90000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc4.9 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     4.90000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf4.9 % WALL TEMPERATURE
+     0.50000     0.50000     4.90000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed4.9 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     4.90000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr4.95 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     4.95000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc4.95 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     4.95000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf4.95 % WALL TEMPERATURE
+     0.50000     0.50000     4.95000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed4.95 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     4.95000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qr5 % RADIATIVE HEAT FLUX
+     0.50000     0.50000     5.00000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Qc5 % CONVECTIVE HEAT FLUX
+     0.50000     0.50000     5.00000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tsurf5 % WALL TEMPERATURE
+     0.50000     0.50000     5.00000     0.00000     0.00000    -1.00000  0  0 % null
+
+DEVICE
+ Tseed5 % INSIDE WALL TEMPERATURE
+     0.50000     0.50000     5.00000     0.00000     0.00000    -1.00000  0  0 % null
+
+VERT
+       0
+
+FACE
+       0
+
+OFFSET
+      0.00000      0.00000      0.00000
+
+GRID   MESH  1
+   20   20  102    0
+
+PDIM
+      0.00000      1.00000      0.00000      1.00000      0.00000      5.10000      0.00000      0.00000      0.00000
+
+TRNX
+    0
+    0       0.00000
+    1       0.05000
+    2       0.10000
+    3       0.15000
+    4       0.20000
+    5       0.25000
+    6       0.30000
+    7       0.35000
+    8       0.40000
+    9       0.45000
+   10       0.50000
+   11       0.55000
+   12       0.60000
+   13       0.65000
+   14       0.70000
+   15       0.75000
+   16       0.80000
+   17       0.85000
+   18       0.90000
+   19       0.95000
+   20       1.00000
+
+TRNY
+    0
+    0       0.00000
+    1       0.05000
+    2       0.10000
+    3       0.15000
+    4       0.20000
+    5       0.25000
+    6       0.30000
+    7       0.35000
+    8       0.40000
+    9       0.45000
+   10       0.50000
+   11       0.55000
+   12       0.60000
+   13       0.65000
+   14       0.70000
+   15       0.75000
+   16       0.80000
+   17       0.85000
+   18       0.90000
+   19       0.95000
+   20       1.00000
+
+TRNZ
+    0
+    0       0.00000
+    1       0.05000
+    2       0.10000
+    3       0.15000
+    4       0.20000
+    5       0.25000
+    6       0.30000
+    7       0.35000
+    8       0.40000
+    9       0.45000
+   10       0.50000
+   11       0.55000
+   12       0.60000
+   13       0.65000
+   14       0.70000
+   15       0.75000
+   16       0.80000
+   17       0.85000
+   18       0.90000
+   19       0.95000
+   20       1.00000
+   21       1.05000
+   22       1.10000
+   23       1.15000
+   24       1.20000
+   25       1.25000
+   26       1.30000
+   27       1.35000
+   28       1.40000
+   29       1.45000
+   30       1.50000
+   31       1.55000
+   32       1.60000
+   33       1.65000
+   34       1.70000
+   35       1.75000
+   36       1.80000
+   37       1.85000
+   38       1.90000
+   39       1.95000
+   40       2.00000
+   41       2.05000
+   42       2.10000
+   43       2.15000
+   44       2.20000
+   45       2.25000
+   46       2.30000
+   47       2.35000
+   48       2.40000
+   49       2.45000
+   50       2.50000
+   51       2.55000
+   52       2.60000
+   53       2.65000
+   54       2.70000
+   55       2.75000
+   56       2.80000
+   57       2.85000
+   58       2.90000
+   59       2.95000
+   60       3.00000
+   61       3.05000
+   62       3.10000
+   63       3.15000
+   64       3.20000
+   65       3.25000
+   66       3.30000
+   67       3.35000
+   68       3.40000
+   69       3.45000
+   70       3.50000
+   71       3.55000
+   72       3.60000
+   73       3.65000
+   74       3.70000
+   75       3.75000
+   76       3.80000
+   77       3.85000
+   78       3.90000
+   79       3.95000
+   80       4.00000
+   81       4.05000
+   82       4.10000
+   83       4.15000
+   84       4.20000
+   85       4.25000
+   86       4.30000
+   87       4.35000
+   88       4.40000
+   89       4.45000
+   90       4.50000
+   91       4.55000
+   92       4.60000
+   93       4.65000
+   94       4.70000
+   95       4.75000
+   96       4.80000
+   97       4.85000
+   98       4.90000
+   99       4.95000
+  100       5.00000
+  101       5.05000
+  102       5.10000
+
+OBST
+           0
+
+VENT
+    7    1
+     0.00000     0.00000     0.00000     1.00000     0.00000     5.10000     1   3
+     1.00000     1.00000     0.00000     1.00000     0.00000     5.10000     2   3
+     0.00000     1.00000     0.00000     0.00000     0.00000     5.10000     3   3
+     0.00000     1.00000     1.00000     1.00000     0.00000     5.10000     4   3
+     0.00000     1.00000     0.00000     1.00000     0.00000     0.00000     5   2
+     0.00000     1.00000     0.00000     1.00000     5.10000     5.10000     6   3
+     0.00000     1.00000     0.00000     1.00000     0.00000     0.00000     7   2
+    0    0    0   20    0  102  -99   -2
+   20   20    0   20    0  102  -99   -2
+    0   20    0    0    0  102  -99   -2
+    0   20   20   20    0  102  -99   -2
+    0   20    0   20    0    0    8   -2
+    0   20    0   20  102  102  -99   -2
+    0   20    0   20    0    0   99    0
+SMOKF3D     1
+ PICOCO2700_01.s3d
+ SOOT MASS FRACTION
+ Y_Soot
+ kg/kg
+SMOKF3D     1
+ PICOCO2700_02.s3d
+ HRRPUV
+ hrrpuv
+ kW/m3
+SLCF     1 &     0    20    10    10     0   102
+ PICOCO2700_01.sf
+ INTEGRATED INTENSITY
+ U
+ kW/m2
+SLCF     1 &     0    20    10    10     0   102
+ PICOCO2700_02.sf
+ TEMPERATURE
+ temp
+ C
+PRT5     1
+ PICOCO2700.prt5
+  1
+  1
+DEVICE_ACT     Qr0.05
+     1      0.00     0
+DEVICE_ACT     Qc0.05
+     2      0.00     0
+DEVICE_ACT     Tsurf0.05
+     3      0.00     0
+DEVICE_ACT     Tseed0.05
+     4      0.00     0
+DEVICE_ACT     Qr0.1
+     5      0.00     0
+DEVICE_ACT     Qc0.1
+     6      0.00     0
+DEVICE_ACT     Tsurf0.1
+     7      0.00     0
+DEVICE_ACT     Tseed0.1
+     8      0.00     0
+DEVICE_ACT     Qr0.15
+     9      0.00     0
+DEVICE_ACT     Qc0.15
+    10      0.00     0
+DEVICE_ACT     Tsurf0.15
+    11      0.00     0
+DEVICE_ACT     Tseed0.15
+    12      0.00     0
+DEVICE_ACT     Qr0.2
+    13      0.00     0
+DEVICE_ACT     Qc0.2
+    14      0.00     0
+DEVICE_ACT     Tsurf0.2
+    15      0.00     0
+DEVICE_ACT     Tseed0.2
+    16      0.00     0
+DEVICE_ACT     Qr0.25
+    17      0.00     0
+DEVICE_ACT     Qc0.25
+    18      0.00     0
+DEVICE_ACT     Tsurf0.25
+    19      0.00     0
+DEVICE_ACT     Tseed0.25
+    20      0.00     0
+DEVICE_ACT     Qr0.3
+    21      0.00     0
+DEVICE_ACT     Qc0.3
+    22      0.00     0
+DEVICE_ACT     Tsurf0.3
+    23      0.00     0
+DEVICE_ACT     Tseed0.3
+    24      0.00     0
+DEVICE_ACT     Qr0.35
+    25      0.00     0
+DEVICE_ACT     Qc0.35
+    26      0.00     0
+DEVICE_ACT     Tsurf0.35
+    27      0.00     0
+DEVICE_ACT     Tseed0.35
+    28      0.00     0
+DEVICE_ACT     Qr0.4
+    29      0.00     0
+DEVICE_ACT     Qc0.4
+    30      0.00     0
+DEVICE_ACT     Tsurf0.4
+    31      0.00     0
+DEVICE_ACT     Tseed0.4
+    32      0.00     0
+DEVICE_ACT     Qr0.45
+    33      0.00     0
+DEVICE_ACT     Qc0.45
+    34      0.00     0
+DEVICE_ACT     Tsurf0.45
+    35      0.00     0
+DEVICE_ACT     Tseed0.45
+    36      0.00     0
+DEVICE_ACT     Qr0.5
+    37      0.00     0
+DEVICE_ACT     Qc0.5
+    38      0.00     0
+DEVICE_ACT     Tsurf0.5
+    39      0.00     0
+DEVICE_ACT     Tseed0.5
+    40      0.00     0
+DEVICE_ACT     Qr0.55
+    41      0.00     0
+DEVICE_ACT     Qc0.55
+    42      0.00     0
+DEVICE_ACT     Tsurf0.55
+    43      0.00     0
+DEVICE_ACT     Tseed0.55
+    44      0.00     0
+DEVICE_ACT     Qr0.6
+    45      0.00     0
+DEVICE_ACT     Qc0.6
+    46      0.00     0
+DEVICE_ACT     Tsurf0.6
+    47      0.00     0
+DEVICE_ACT     Tseed0.6
+    48      0.00     0
+DEVICE_ACT     Qr0.65
+    49      0.00     0
+DEVICE_ACT     Qc0.65
+    50      0.00     0
+DEVICE_ACT     Tsurf0.65
+    51      0.00     0
+DEVICE_ACT     Tseed0.65
+    52      0.00     0
+DEVICE_ACT     Qr0.7
+    53      0.00     0
+DEVICE_ACT     Qc0.7
+    54      0.00     0
+DEVICE_ACT     Tsurf0.7
+    55      0.00     0
+DEVICE_ACT     Tseed0.7
+    56      0.00     0
+DEVICE_ACT     Qr0.75
+    57      0.00     0
+DEVICE_ACT     Qc0.75
+    58      0.00     0
+DEVICE_ACT     Tsurf0.75
+    59      0.00     0
+DEVICE_ACT     Tseed0.75
+    60      0.00     0
+DEVICE_ACT     Qr0.8
+    61      0.00     0
+DEVICE_ACT     Qc0.8
+    62      0.00     0
+DEVICE_ACT     Tsurf0.8
+    63      0.00     0
+DEVICE_ACT     Tseed0.8
+    64      0.00     0
+DEVICE_ACT     Qr0.85
+    65      0.00     0
+DEVICE_ACT     Qc0.85
+    66      0.00     0
+DEVICE_ACT     Tsurf0.85
+    67      0.00     0
+DEVICE_ACT     Tseed0.85
+    68      0.00     0
+DEVICE_ACT     Qr0.9
+    69      0.00     0
+DEVICE_ACT     Qc0.9
+    70      0.00     0
+DEVICE_ACT     Tsurf0.9
+    71      0.00     0
+DEVICE_ACT     Tseed0.9
+    72      0.00     0
+DEVICE_ACT     Qr0.95
+    73      0.00     0
+DEVICE_ACT     Qc0.95
+    74      0.00     0
+DEVICE_ACT     Tsurf0.95
+    75      0.00     0
+DEVICE_ACT     Tseed0.95
+    76      0.00     0
+DEVICE_ACT     Qr1
+    77      0.00     0
+DEVICE_ACT     Qc1
+    78      0.00     0
+DEVICE_ACT     Tsurf1
+    79      0.00     0
+DEVICE_ACT     Tseed1
+    80      0.00     0
+DEVICE_ACT     Qr1.05
+    81      0.00     0
+DEVICE_ACT     Qc1.05
+    82      0.00     0
+DEVICE_ACT     Tsurf1.05
+    83      0.00     0
+DEVICE_ACT     Tseed1.05
+    84      0.00     0
+DEVICE_ACT     Qr1.1
+    85      0.00     0
+DEVICE_ACT     Qc1.1
+    86      0.00     0
+DEVICE_ACT     Tsurf1.1
+    87      0.00     0
+DEVICE_ACT     Tseed1.1
+    88      0.00     0
+DEVICE_ACT     Qr1.15
+    89      0.00     0
+DEVICE_ACT     Qc1.15
+    90      0.00     0
+DEVICE_ACT     Tsurf1.15
+    91      0.00     0
+DEVICE_ACT     Tseed1.15
+    92      0.00     0
+DEVICE_ACT     Qr1.2
+    93      0.00     0
+DEVICE_ACT     Qc1.2
+    94      0.00     0
+DEVICE_ACT     Tsurf1.2
+    95      0.00     0
+DEVICE_ACT     Tseed1.2
+    96      0.00     0
+DEVICE_ACT     Qr1.25
+    97      0.00     0
+DEVICE_ACT     Qc1.25
+    98      0.00     0
+DEVICE_ACT     Tsurf1.25
+    99      0.00     0
+DEVICE_ACT     Tseed1.25
+   100      0.00     0
+DEVICE_ACT     Qr1.3
+   101      0.00     0
+DEVICE_ACT     Qc1.3
+   102      0.00     0
+DEVICE_ACT     Tsurf1.3
+   103      0.00     0
+DEVICE_ACT     Tseed1.3
+   104      0.00     0
+DEVICE_ACT     Qr1.35
+   105      0.00     0
+DEVICE_ACT     Qc1.35
+   106      0.00     0
+DEVICE_ACT     Tsurf1.35
+   107      0.00     0
+DEVICE_ACT     Tseed1.35
+   108      0.00     0
+DEVICE_ACT     Qr1.4
+   109      0.00     0
+DEVICE_ACT     Qc1.4
+   110      0.00     0
+DEVICE_ACT     Tsurf1.4
+   111      0.00     0
+DEVICE_ACT     Tseed1.4
+   112      0.00     0
+DEVICE_ACT     Qr1.45
+   113      0.00     0
+DEVICE_ACT     Qc1.45
+   114      0.00     0
+DEVICE_ACT     Tsurf1.45
+   115      0.00     0
+DEVICE_ACT     Tseed1.45
+   116      0.00     0
+DEVICE_ACT     Qr1.5
+   117      0.00     0
+DEVICE_ACT     Qc1.5
+   118      0.00     0
+DEVICE_ACT     Tsurf1.5
+   119      0.00     0
+DEVICE_ACT     Tseed1.5
+   120      0.00     0
+DEVICE_ACT     Qr1.55
+   121      0.00     0
+DEVICE_ACT     Qc1.55
+   122      0.00     0
+DEVICE_ACT     Tsurf1.55
+   123      0.00     0
+DEVICE_ACT     Tseed1.55
+   124      0.00     0
+DEVICE_ACT     Qr1.6
+   125      0.00     0
+DEVICE_ACT     Qc1.6
+   126      0.00     0
+DEVICE_ACT     Tsurf1.6
+   127      0.00     0
+DEVICE_ACT     Tseed1.6
+   128      0.00     0
+DEVICE_ACT     Qr1.65
+   129      0.00     0
+DEVICE_ACT     Qc1.65
+   130      0.00     0
+DEVICE_ACT     Tsurf1.65
+   131      0.00     0
+DEVICE_ACT     Tseed1.65
+   132      0.00     0
+DEVICE_ACT     Qr1.7
+   133      0.00     0
+DEVICE_ACT     Qc1.7
+   134      0.00     0
+DEVICE_ACT     Tsurf1.7
+   135      0.00     0
+DEVICE_ACT     Tseed1.7
+   136      0.00     0
+DEVICE_ACT     Qr1.75
+   137      0.00     0
+DEVICE_ACT     Qc1.75
+   138      0.00     0
+DEVICE_ACT     Tsurf1.75
+   139      0.00     0
+DEVICE_ACT     Tseed1.75
+   140      0.00     0
+DEVICE_ACT     Qr1.8
+   141      0.00     0
+DEVICE_ACT     Qc1.8
+   142      0.00     0
+DEVICE_ACT     Tsurf1.8
+   143      0.00     0
+DEVICE_ACT     Tseed1.8
+   144      0.00     0
+DEVICE_ACT     Qr1.85
+   145      0.00     0
+DEVICE_ACT     Qc1.85
+   146      0.00     0
+DEVICE_ACT     Tsurf1.85
+   147      0.00     0
+DEVICE_ACT     Tseed1.85
+   148      0.00     0
+DEVICE_ACT     Qr1.9
+   149      0.00     0
+DEVICE_ACT     Qc1.9
+   150      0.00     0
+DEVICE_ACT     Tsurf1.9
+   151      0.00     0
+DEVICE_ACT     Tseed1.9
+   152      0.00     0
+DEVICE_ACT     Qr1.95
+   153      0.00     0
+DEVICE_ACT     Qc1.95
+   154      0.00     0
+DEVICE_ACT     Tsurf1.95
+   155      0.00     0
+DEVICE_ACT     Tseed1.95
+   156      0.00     0
+DEVICE_ACT     Qr2
+   157      0.00     0
+DEVICE_ACT     Qc2
+   158      0.00     0
+DEVICE_ACT     Tsurf2
+   159      0.00     0
+DEVICE_ACT     Tseed2
+   160      0.00     0
+DEVICE_ACT     Qr2.05
+   161      0.00     0
+DEVICE_ACT     Qc2.05
+   162      0.00     0
+DEVICE_ACT     Tsurf2.05
+   163      0.00     0
+DEVICE_ACT     Tseed2.05
+   164      0.00     0
+DEVICE_ACT     Qr2.1
+   165      0.00     0
+DEVICE_ACT     Qc2.1
+   166      0.00     0
+DEVICE_ACT     Tsurf2.1
+   167      0.00     0
+DEVICE_ACT     Tseed2.1
+   168      0.00     0
+DEVICE_ACT     Qr2.15
+   169      0.00     0
+DEVICE_ACT     Qc2.15
+   170      0.00     0
+DEVICE_ACT     Tsurf2.15
+   171      0.00     0
+DEVICE_ACT     Tseed2.15
+   172      0.00     0
+DEVICE_ACT     Qr2.2
+   173      0.00     0
+DEVICE_ACT     Qc2.2
+   174      0.00     0
+DEVICE_ACT     Tsurf2.2
+   175      0.00     0
+DEVICE_ACT     Tseed2.2
+   176      0.00     0
+DEVICE_ACT     Qr2.25
+   177      0.00     0
+DEVICE_ACT     Qc2.25
+   178      0.00     0
+DEVICE_ACT     Tsurf2.25
+   179      0.00     0
+DEVICE_ACT     Tseed2.25
+   180      0.00     0
+DEVICE_ACT     Qr2.3
+   181      0.00     0
+DEVICE_ACT     Qc2.3
+   182      0.00     0
+DEVICE_ACT     Tsurf2.3
+   183      0.00     0
+DEVICE_ACT     Tseed2.3
+   184      0.00     0
+DEVICE_ACT     Qr2.35
+   185      0.00     0
+DEVICE_ACT     Qc2.35
+   186      0.00     0
+DEVICE_ACT     Tsurf2.35
+   187      0.00     0
+DEVICE_ACT     Tseed2.35
+   188      0.00     0
+DEVICE_ACT     Qr2.4
+   189      0.00     0
+DEVICE_ACT     Qc2.4
+   190      0.00     0
+DEVICE_ACT     Tsurf2.4
+   191      0.00     0
+DEVICE_ACT     Tseed2.4
+   192      0.00     0
+DEVICE_ACT     Qr2.45
+   193      0.00     0
+DEVICE_ACT     Qc2.45
+   194      0.00     0
+DEVICE_ACT     Tsurf2.45
+   195      0.00     0
+DEVICE_ACT     Tseed2.45
+   196      0.00     0
+DEVICE_ACT     Qr2.5
+   197      0.00     0
+DEVICE_ACT     Qc2.5
+   198      0.00     0
+DEVICE_ACT     Tsurf2.5
+   199      0.00     0
+DEVICE_ACT     Tseed2.5
+   200      0.00     0
+DEVICE_ACT     Qr2.55
+   201      0.00     0
+DEVICE_ACT     Qc2.55
+   202      0.00     0
+DEVICE_ACT     Tsurf2.55
+   203      0.00     0
+DEVICE_ACT     Tseed2.55
+   204      0.00     0
+DEVICE_ACT     Qr2.6
+   205      0.00     0
+DEVICE_ACT     Qc2.6
+   206      0.00     0
+DEVICE_ACT     Tsurf2.6
+   207      0.00     0
+DEVICE_ACT     Tseed2.6
+   208      0.00     0
+DEVICE_ACT     Qr2.65
+   209      0.00     0
+DEVICE_ACT     Qc2.65
+   210      0.00     0
+DEVICE_ACT     Tsurf2.65
+   211      0.00     0
+DEVICE_ACT     Tseed2.65
+   212      0.00     0
+DEVICE_ACT     Qr2.7
+   213      0.00     0
+DEVICE_ACT     Qc2.7
+   214      0.00     0
+DEVICE_ACT     Tsurf2.7
+   215      0.00     0
+DEVICE_ACT     Tseed2.7
+   216      0.00     0
+DEVICE_ACT     Qr2.75
+   217      0.00     0
+DEVICE_ACT     Qc2.75
+   218      0.00     0
+DEVICE_ACT     Tsurf2.75
+   219      0.00     0
+DEVICE_ACT     Tseed2.75
+   220      0.00     0
+DEVICE_ACT     Qr2.8
+   221      0.00     0
+DEVICE_ACT     Qc2.8
+   222      0.00     0
+DEVICE_ACT     Tsurf2.8
+   223      0.00     0
+DEVICE_ACT     Tseed2.8
+   224      0.00     0
+DEVICE_ACT     Qr2.85
+   225      0.00     0
+DEVICE_ACT     Qc2.85
+   226      0.00     0
+DEVICE_ACT     Tsurf2.85
+   227      0.00     0
+DEVICE_ACT     Tseed2.85
+   228      0.00     0
+DEVICE_ACT     Qr2.9
+   229      0.00     0
+DEVICE_ACT     Qc2.9
+   230      0.00     0
+DEVICE_ACT     Tsurf2.9
+   231      0.00     0
+DEVICE_ACT     Tseed2.9
+   232      0.00     0
+DEVICE_ACT     Qr2.95
+   233      0.00     0
+DEVICE_ACT     Qc2.95
+   234      0.00     0
+DEVICE_ACT     Tsurf2.95
+   235      0.00     0
+DEVICE_ACT     Tseed2.95
+   236      0.00     0
+DEVICE_ACT     Qr3
+   237      0.00     0
+DEVICE_ACT     Qc3
+   238      0.00     0
+DEVICE_ACT     Tsurf3
+   239      0.00     0
+DEVICE_ACT     Tseed3
+   240      0.00     0
+DEVICE_ACT     Qr3.05
+   241      0.00     0
+DEVICE_ACT     Qc3.05
+   242      0.00     0
+DEVICE_ACT     Tsurf3.05
+   243      0.00     0
+DEVICE_ACT     Tseed3.05
+   244      0.00     0
+DEVICE_ACT     Qr3.1
+   245      0.00     0
+DEVICE_ACT     Qc3.1
+   246      0.00     0
+DEVICE_ACT     Tsurf3.1
+   247      0.00     0
+DEVICE_ACT     Tseed3.1
+   248      0.00     0
+DEVICE_ACT     Qr3.15
+   249      0.00     0
+DEVICE_ACT     Qc3.15
+   250      0.00     0
+DEVICE_ACT     Tsurf3.15
+   251      0.00     0
+DEVICE_ACT     Tseed3.15
+   252      0.00     0
+DEVICE_ACT     Qr3.2
+   253      0.00     0
+DEVICE_ACT     Qc3.2
+   254      0.00     0
+DEVICE_ACT     Tsurf3.2
+   255      0.00     0
+DEVICE_ACT     Tseed3.2
+   256      0.00     0
+DEVICE_ACT     Qr3.25
+   257      0.00     0
+DEVICE_ACT     Qc3.25
+   258      0.00     0
+DEVICE_ACT     Tsurf3.25
+   259      0.00     0
+DEVICE_ACT     Tseed3.25
+   260      0.00     0
+DEVICE_ACT     Qr3.3
+   261      0.00     0
+DEVICE_ACT     Qc3.3
+   262      0.00     0
+DEVICE_ACT     Tsurf3.3
+   263      0.00     0
+DEVICE_ACT     Tseed3.3
+   264      0.00     0
+DEVICE_ACT     Qr3.35
+   265      0.00     0
+DEVICE_ACT     Qc3.35
+   266      0.00     0
+DEVICE_ACT     Tsurf3.35
+   267      0.00     0
+DEVICE_ACT     Tseed3.35
+   268      0.00     0
+DEVICE_ACT     Qr3.4
+   269      0.00     0
+DEVICE_ACT     Qc3.4
+   270      0.00     0
+DEVICE_ACT     Tsurf3.4
+   271      0.00     0
+DEVICE_ACT     Tseed3.4
+   272      0.00     0
+DEVICE_ACT     Qr3.45
+   273      0.00     0
+DEVICE_ACT     Qc3.45
+   274      0.00     0
+DEVICE_ACT     Tsurf3.45
+   275      0.00     0
+DEVICE_ACT     Tseed3.45
+   276      0.00     0
+DEVICE_ACT     Qr3.5
+   277      0.00     0
+DEVICE_ACT     Qc3.5
+   278      0.00     0
+DEVICE_ACT     Tsurf3.5
+   279      0.00     0
+DEVICE_ACT     Tseed3.5
+   280      0.00     0
+DEVICE_ACT     Qr3.55
+   281      0.00     0
+DEVICE_ACT     Qc3.55
+   282      0.00     0
+DEVICE_ACT     Tsurf3.55
+   283      0.00     0
+DEVICE_ACT     Tseed3.55
+   284      0.00     0
+DEVICE_ACT     Qr3.6
+   285      0.00     0
+DEVICE_ACT     Qc3.6
+   286      0.00     0
+DEVICE_ACT     Tsurf3.6
+   287      0.00     0
+DEVICE_ACT     Tseed3.6
+   288      0.00     0
+DEVICE_ACT     Qr3.65
+   289      0.00     0
+DEVICE_ACT     Qc3.65
+   290      0.00     0
+DEVICE_ACT     Tsurf3.65
+   291      0.00     0
+DEVICE_ACT     Tseed3.65
+   292      0.00     0
+DEVICE_ACT     Qr3.7
+   293      0.00     0
+DEVICE_ACT     Qc3.7
+   294      0.00     0
+DEVICE_ACT     Tsurf3.7
+   295      0.00     0
+DEVICE_ACT     Tseed3.7
+   296      0.00     0
+DEVICE_ACT     Qr3.75
+   297      0.00     0
+DEVICE_ACT     Qc3.75
+   298      0.00     0
+DEVICE_ACT     Tsurf3.75
+   299      0.00     0
+DEVICE_ACT     Tseed3.75
+   300      0.00     0
+DEVICE_ACT     Qr3.8
+   301      0.00     0
+DEVICE_ACT     Qc3.8
+   302      0.00     0
+DEVICE_ACT     Tsurf3.8
+   303      0.00     0
+DEVICE_ACT     Tseed3.8
+   304      0.00     0
+DEVICE_ACT     Qr3.85
+   305      0.00     0
+DEVICE_ACT     Qc3.85
+   306      0.00     0
+DEVICE_ACT     Tsurf3.85
+   307      0.00     0
+DEVICE_ACT     Tseed3.85
+   308      0.00     0
+DEVICE_ACT     Qr3.9
+   309      0.00     0
+DEVICE_ACT     Qc3.9
+   310      0.00     0
+DEVICE_ACT     Tsurf3.9
+   311      0.00     0
+DEVICE_ACT     Tseed3.9
+   312      0.00     0
+DEVICE_ACT     Qr3.95
+   313      0.00     0
+DEVICE_ACT     Qc3.95
+   314      0.00     0
+DEVICE_ACT     Tsurf3.95
+   315      0.00     0
+DEVICE_ACT     Tseed3.95
+   316      0.00     0
+DEVICE_ACT     Qr4
+   317      0.00     0
+DEVICE_ACT     Qc4
+   318      0.00     0
+DEVICE_ACT     Tsurf4
+   319      0.00     0
+DEVICE_ACT     Tseed4
+   320      0.00     0
+DEVICE_ACT     Qr4.05
+   321      0.00     0
+DEVICE_ACT     Qc4.05
+   322      0.00     0
+DEVICE_ACT     Tsurf4.05
+   323      0.00     0
+DEVICE_ACT     Tseed4.05
+   324      0.00     0
+DEVICE_ACT     Qr4.1
+   325      0.00     0
+DEVICE_ACT     Qc4.1
+   326      0.00     0
+DEVICE_ACT     Tsurf4.1
+   327      0.00     0
+DEVICE_ACT     Tseed4.1
+   328      0.00     0
+DEVICE_ACT     Qr4.15
+   329      0.00     0
+DEVICE_ACT     Qc4.15
+   330      0.00     0
+DEVICE_ACT     Tsurf4.15
+   331      0.00     0
+DEVICE_ACT     Tseed4.15
+   332      0.00     0
+DEVICE_ACT     Qr4.2
+   333      0.00     0
+DEVICE_ACT     Qc4.2
+   334      0.00     0
+DEVICE_ACT     Tsurf4.2
+   335      0.00     0
+DEVICE_ACT     Tseed4.2
+   336      0.00     0
+DEVICE_ACT     Qr4.25
+   337      0.00     0
+DEVICE_ACT     Qc4.25
+   338      0.00     0
+DEVICE_ACT     Tsurf4.25
+   339      0.00     0
+DEVICE_ACT     Tseed4.25
+   340      0.00     0
+DEVICE_ACT     Qr4.3
+   341      0.00     0
+DEVICE_ACT     Qc4.3
+   342      0.00     0
+DEVICE_ACT     Tsurf4.3
+   343      0.00     0
+DEVICE_ACT     Tseed4.3
+   344      0.00     0
+DEVICE_ACT     Qr4.35
+   345      0.00     0
+DEVICE_ACT     Qc4.35
+   346      0.00     0
+DEVICE_ACT     Tsurf4.35
+   347      0.00     0
+DEVICE_ACT     Tseed4.35
+   348      0.00     0
+DEVICE_ACT     Qr4.4
+   349      0.00     0
+DEVICE_ACT     Qc4.4
+   350      0.00     0
+DEVICE_ACT     Tsurf4.4
+   351      0.00     0
+DEVICE_ACT     Tseed4.4
+   352      0.00     0
+DEVICE_ACT     Qr4.45
+   353      0.00     0
+DEVICE_ACT     Qc4.45
+   354      0.00     0
+DEVICE_ACT     Tsurf4.45
+   355      0.00     0
+DEVICE_ACT     Tseed4.45
+   356      0.00     0
+DEVICE_ACT     Qr4.5
+   357      0.00     0
+DEVICE_ACT     Qc4.5
+   358      0.00     0
+DEVICE_ACT     Tsurf4.5
+   359      0.00     0
+DEVICE_ACT     Tseed4.5
+   360      0.00     0
+DEVICE_ACT     Qr4.55
+   361      0.00     0
+DEVICE_ACT     Qc4.55
+   362      0.00     0
+DEVICE_ACT     Tsurf4.55
+   363      0.00     0
+DEVICE_ACT     Tseed4.55
+   364      0.00     0
+DEVICE_ACT     Qr4.6
+   365      0.00     0
+DEVICE_ACT     Qc4.6
+   366      0.00     0
+DEVICE_ACT     Tsurf4.6
+   367      0.00     0
+DEVICE_ACT     Tseed4.6
+   368      0.00     0
+DEVICE_ACT     Qr4.65
+   369      0.00     0
+DEVICE_ACT     Qc4.65
+   370      0.00     0
+DEVICE_ACT     Tsurf4.65
+   371      0.00     0
+DEVICE_ACT     Tseed4.65
+   372      0.00     0
+DEVICE_ACT     Qr4.7
+   373      0.00     0
+DEVICE_ACT     Qc4.7
+   374      0.00     0
+DEVICE_ACT     Tsurf4.7
+   375      0.00     0
+DEVICE_ACT     Tseed4.7
+   376      0.00     0
+DEVICE_ACT     Qr4.75
+   377      0.00     0
+DEVICE_ACT     Qc4.75
+   378      0.00     0
+DEVICE_ACT     Tsurf4.75
+   379      0.00     0
+DEVICE_ACT     Tseed4.75
+   380      0.00     0
+DEVICE_ACT     Qr4.8
+   381      0.00     0
+DEVICE_ACT     Qc4.8
+   382      0.00     0
+DEVICE_ACT     Tsurf4.8
+   383      0.00     0
+DEVICE_ACT     Tseed4.8
+   384      0.00     0
+DEVICE_ACT     Qr4.85
+   385      0.00     0
+DEVICE_ACT     Qc4.85
+   386      0.00     0
+DEVICE_ACT     Tsurf4.85
+   387      0.00     0
+DEVICE_ACT     Tseed4.85
+   388      0.00     0
+DEVICE_ACT     Qr4.9
+   389      0.00     0
+DEVICE_ACT     Qc4.9
+   390      0.00     0
+DEVICE_ACT     Tsurf4.9
+   391      0.00     0
+DEVICE_ACT     Tseed4.9
+   392      0.00     0
+DEVICE_ACT     Qr4.95
+   393      0.00     0
+DEVICE_ACT     Qc4.95
+   394      0.00     0
+DEVICE_ACT     Tsurf4.95
+   395      0.00     0
+DEVICE_ACT     Tseed4.95
+   396      0.00     0
+DEVICE_ACT     Qr5
+   397      0.00     0
+DEVICE_ACT     Qc5
+   398      0.00     0
+DEVICE_ACT     Tsurf5
+   399      0.00     0
+DEVICE_ACT     Tseed5
+   400      0.00     0
